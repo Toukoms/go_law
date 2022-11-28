@@ -13,34 +13,14 @@ class Articles extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(padding),
-      padding: const EdgeInsets.all(padding * 0.8),
-      decoration: BoxDecoration(
-        border: Border.all(
-          color: Colors.black54,
-          width: 1.75,
+    return Card(
+      child: ListTile(
+        title: TextH3(title: title),
+        subtitle: Text(
+          description,
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
         ),
-        borderRadius: BorderRadius.circular(8.0),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          TextH2(
-            title: title,
-          ),
-          Text(
-            description,
-            softWrap: true,
-            overflow: TextOverflow.ellipsis,
-            maxLines: 2,
-            style: const TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w600,
-            ),
-            textAlign: TextAlign.justify,
-          )
-        ],
       ),
     );
   }

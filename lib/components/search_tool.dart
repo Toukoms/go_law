@@ -17,7 +17,7 @@ class SearchTool extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         SearchBar(
-          screenWidth: width,
+          screenWidth: width * 0.80,
           color: color,
         ),
         Container(
