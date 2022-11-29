@@ -2,6 +2,12 @@
 
 A new Flutter project.
 
+## Installation
+
+```bash
+  flutter pub get
+```
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
