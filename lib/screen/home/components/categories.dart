@@ -22,6 +22,7 @@ class Categories extends StatelessWidget {
             title: val['title'],
             nbArticles: val['nbArticles'],
             color: val['color'],
+            imgPath: val['image'],
           );
         })
       ]),

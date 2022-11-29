@@ -10,6 +10,7 @@ class Categorie extends StatelessWidget {
     required this.title,
     required this.nbArticles,
     this.color = const Color.fromARGB(220, 0, 0, 0),
+    required this.imgPath,
   }) : super(key: key);
 
   final double boxWidth;
@@ -17,6 +18,7 @@ class Categorie extends StatelessWidget {
   final String title;
   final int nbArticles;
   final Color color;
+  final String imgPath;
 
   @override
   Widget build(BuildContext context) {
@@ -47,14 +49,23 @@ class Categorie extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Image here: ................,
-            Container(
-              height: boxHeight * 0.54,
-              margin: const EdgeInsets.only(bottom: 12),
-              decoration: BoxDecoration(
-                color: color,
-                borderRadius: BorderRadius.circular(6.0),
-              ),
+            Stack(
+              children: [
+                Container(
+                  height: boxHeight * 0.54,
+                  margin: const EdgeInsets.only(bottom: 12),
+                  decoration: BoxDecoration(
+                    color: color,
+                    borderRadius: BorderRadius.circular(6.0),
+                  ),
+                ),
+                Positioned.fill(
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Image.asset(imgPath),
+                  ),
+                ),
+              ],
             ),
             TextH3(title: title),
             Text("$nbArticles articles"),

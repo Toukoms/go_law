@@ -5,26 +5,31 @@ const double padding = 12.0;
 const List<Map> categories = [
   {
     "title": "Faune et flore",
+    "image": "/images/categories/fauna_and_flora.png",
     "color": Color.fromRGBO(86, 154, 19, 1),
     "nbArticles": 55,
   },
   {
     "title": "Corruption et l’engagement d’un représentant du gouvernement",
+    "image": "/images/categories/Bribery.png",
     "color": Color.fromRGBO(36, 87, 197, 1),
     "nbArticles": 36,
   },
   {
     "title": "Organisation de la lutte contre la corruption",
+    "image": "/images/categories/Refusing.png",
     "color": Color.fromRGBO(216, 0, 39, 1),
     "nbArticles": 72,
   },
   {
     "title": "Répression et les principes",
+    "image": "/images/categories/Vector.png",
     "color": Color.fromRGBO(0, 0, 0, 1),
     "nbArticles": 24,
   },
   {
     "title": "Déontologie et la bonne conduite des agents publics",
+    "image": "/images/categories/Open_Book.png",
     "color": Color.fromRGBO(13, 248, 178, 1),
     "nbArticles": 60,
   },

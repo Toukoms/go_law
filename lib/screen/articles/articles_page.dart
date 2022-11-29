@@ -23,22 +23,27 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur obcaecati libero fugiat hic eveniet aperiam enim."
     },
     {
-      "title": "Article n° 01",
+      "title": "Article n° 02",
       "description":
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur obcaecati libero fugiat hic eveniet aperiam enim."
     },
     {
-      "title": "Article n° 01",
+      "title": "Article n° 03",
       "description":
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur obcaecati libero fugiat hic eveniet aperiam enim."
     },
     {
-      "title": "Article n° 01",
+      "title": "Article n° 04",
       "description":
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur obcaecati libero fugiat hic eveniet aperiam enim."
     },
     {
-      "title": "Article n° 01",
+      "title": "Article n° 05",
+      "description":
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur obcaecati libero fugiat hic eveniet aperiam enim."
+    },
+    {
+      "title": "Article n° 06",
       "description":
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur obcaecati libero fugiat hic eveniet aperiam enim."
     },
@@ -53,9 +58,17 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
             onTap: () {
               Navigator.pop(context);
             },
-            child: const Icon(Icons.arrow_back)),
-        backgroundColor: widget.color.withOpacity(0.75),
-        title: const TextH1(title: "Articles"),
+            child: const Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+            )),
+        backgroundColor: Colors.transparent,
+        shadowColor: Colors.transparent,
+        title: const Text(
+          "Articles",
+          textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.black),
+        ),
         centerTitle: true,
       ),
       body: Container(
@@ -79,8 +92,10 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                 itemCount: articles.length,
                 itemBuilder: (BuildContext context, int index) {
                   return Articles(
-                      title: articles[index]['title'],
-                      description: articles[index]['description']);
+                    title: articles[index]['title'],
+                    description: articles[index]['description'],
+                    color: widget.color,
+                  );
                 },
               ),
             ),

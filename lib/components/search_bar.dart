@@ -13,7 +13,7 @@ class SearchBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 45,
-      width: screenWidth * 0.7,
+      width: screenWidth * 0.8,
       padding: const EdgeInsets.all(12.0),
       decoration: BoxDecoration(
         color: Colors.black12,
