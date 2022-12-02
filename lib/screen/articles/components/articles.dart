@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_law/constant.dart';
-import 'package:go_law/screen/contents/contents_screen.dart';
+import 'package:go_law/screen/contents/content_screen.dart';
 
 class Articles extends StatelessWidget {
   const Articles({
@@ -25,7 +25,7 @@ class Articles extends StatelessWidget {
       ),
       child: ListTile(
         contentPadding: const EdgeInsets.all(8.0),
-        leading: Image.asset("images/pdf_img.png"),
+        leading: Image.asset("assets/images/pdf_img.png"),
         title: TextH3(title: title),
         trailing: IconButton(
           onPressed: () {},

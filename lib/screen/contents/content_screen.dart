@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class ContentScreen extends StatefulWidget {
   const ContentScreen({Key? key}) : super(key: key);
@@ -8,27 +9,20 @@ class ContentScreen extends StatefulWidget {
 }
 
 class _ContentScreenState extends State<ContentScreen> {
-  // bool _isLoaded = false;
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  // Load from assets
-  //   SfPdfViewer document = SfPdfViewer.asset('pdf/test.pdf');
-  //   setState(() {
-  //     _isLoaded = true;
-  //   });
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Contenue"),
         centerTitle: true,
-        leading: const Icon(Icons.arrow_back),
+        leading: GestureDetector(
+          child: const Icon(Icons.arrow_back),
+          onTap: () => Navigator.pop(context),
+        ),
       ),
-      // body: Center(child: SfPdfViewer.asset('pdf/test.pdf')),
+      body: Center(
+        child: SfPdfViewer.asset('assets/pdf/test.pdf'),
+      ),
     );
   }
 }

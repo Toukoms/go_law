@@ -9,7 +9,7 @@ class CustomAppBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Image.asset("images/go_law.png", fit: BoxFit.cover),
+        Image.asset("assets/images/go_law.png", fit: BoxFit.cover),
       ],
     );
   }

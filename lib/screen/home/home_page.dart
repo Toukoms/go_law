@@ -23,7 +23,13 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const SizedBox(
+              height: 35,
+            ),
             const CustomAppBar(),
+            const SizedBox(
+              height: 35,
+            ),
             const TextH2(title: "Recherche"),
             const SizedBox(
               height: 12,
