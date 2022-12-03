@@ -14,9 +14,8 @@ class _MailScreenState extends State<MailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.all(padding),
         child: Column(
-          children: const [TextH1(title: "MailScreen")],
+          children: [Center(child: Text("Contact: gofast@gmail.com"))],
         ),
       ),
       bottomNavigationBar: CustomBottomNavigationBar(

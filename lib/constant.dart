@@ -12,15 +12,15 @@ const vertClair = Color.fromRGBO(213, 227, 166, 1);
 
 const List<Map> categories = [
   {
-    "title": "Faune",
+    "title": "Flore",
     "image": "assets/images/categories/Flore.png",
-    "color": Color.fromARGB(255, 0, 148, 85),
+    "color": vert,
     "nbArticles": 55,
   },
   {
-    "title": "Flore",
-    "image": "assets/images/categories/Flore.png",
-    "color": Color.fromARGB(255, 37, 33, 34),
+    "title": "Faune",
+    "image": "assets/images/categories/Gorilla.png",
+    "color": orange,
     "nbArticles": 55,
   },
   {
@@ -44,7 +44,7 @@ const List<Map> categories = [
   {
     "title": "Déontologie et la bonne conduite des agents publics",
     "image": "assets/images/categories/Open_Book.png",
-    "color": Color.fromRGBO(13, 248, 178, 1),
+    "color": Color.fromARGB(255, 0, 255, 145),
     "nbArticles": 60,
   },
 ];

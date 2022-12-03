@@ -29,8 +29,8 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         "icon": Icon(Icons.favorite_border),
       },
       {
-        "label": "Contactez-Nous",
-        "icon": Icon(Icons.mail_outline),
+        "label": "A propos",
+        "icon": Icon(Icons.info),
       }
     ];
     List<String> routes = [

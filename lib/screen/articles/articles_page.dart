@@ -4,6 +4,7 @@ import 'package:go_law/components/search_tool.dart';
 import 'package:go_law/components/swicth_language.dart';
 import 'package:go_law/constant.dart';
 import 'package:go_law/screen/articles/components/articles.dart';
+import 'package:go_law/global.dart' as global;
 
 class ArticlesScreen extends StatefulWidget {
   const ArticlesScreen({Key? key, required this.title, required this.color})
@@ -17,42 +18,16 @@ class ArticlesScreen extends StatefulWidget {
 }
 
 class _ArticlesScreenState extends State<ArticlesScreen> {
-  List<Map> articles = [
-    {
-      "title": "Article n° 01",
-      "description":
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur obcaecati libero fugiat hic eveniet aperiam enim."
-    },
-    {
-      "title": "Article n° 02",
-      "description":
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur obcaecati libero fugiat hic eveniet aperiam enim."
-    },
-    {
-      "title": "Article n° 03",
-      "description":
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur obcaecati libero fugiat hic eveniet aperiam enim."
-    },
-    {
-      "title": "Article n° 04",
-      "description":
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur obcaecati libero fugiat hic eveniet aperiam enim."
-    },
-    {
-      "title": "Article n° 05",
-      "description":
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur obcaecati libero fugiat hic eveniet aperiam enim."
-    },
-    {
-      "title": "Article n° 06",
-      "description":
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur obcaecati libero fugiat hic eveniet aperiam enim."
-    },
-  ];
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    List<Map> articles = [];
+    for (var i = 0; i < global.articles.length; i++) {
+      if (global.articles[i]['categorie'] == widget.title) {
+        articles.add(global.articles[i]);
+      }
+    }
+    print(articles);
     return Scaffold(
       appBar: AppBar(
         leading: GestureDetector(
@@ -102,9 +77,10 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                 itemBuilder: (BuildContext context, int index) {
                   return Articles(
                     title: articles[index]['title'],
-                    description: articles[index]['description'],
                     color: widget.color,
                     id: index.toString(),
+                    liked: false,
+                    path: articles[index]['path'],
                   );
                 },
               ),

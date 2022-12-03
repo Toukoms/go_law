@@ -38,7 +38,7 @@ class _SplashState extends State<Splash> {
           Stack(
             children: [
               Container(
-                height: size.height * 0.5,
+                height: size.height * 0.6,
                 decoration: const BoxDecoration(
                   color: Color.fromRGBO(95, 95, 95, 1),
                   borderRadius: BorderRadius.only(
@@ -47,15 +47,15 @@ class _SplashState extends State<Splash> {
                   ),
                 ),
               ),
-              Center(child: Image.asset("/images/img_splash.png")),
+              Center(child: Image.asset("assets/images/img_splash.png")),
             ],
           ),
           const SizedBox(
-            height: 50,
+            height: 40,
           ),
-          Center(child: Image.asset("/images/go_law.png")),
+          Center(child: Image.asset("assets/images/go_law.png")),
           const SizedBox(
-            height: 65,
+            height: 45,
           ),
           Center(
             child: Container(

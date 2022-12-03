@@ -68,7 +68,7 @@ class Categorie extends StatelessWidget {
               ],
             ),
             TextH3(title: title),
-            Text("$nbArticles articles"),
+            // Text("$nbArticles articles"),
           ],
         ),
       ),
